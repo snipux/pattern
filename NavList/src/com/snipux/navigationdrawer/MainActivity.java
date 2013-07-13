@@ -1,4 +1,4 @@
-package com.example.navlist;
+package com.snipux.navigationdrawer;
 
 import android.app.Activity;
 import android.content.res.Configuration;
@@ -14,8 +14,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.navlist.adapter.MenuAdapter;
-import com.example.navlist.adapter.MenuModel;
+import com.snipux.navigationdrawer.adapter.MenuAdapter;
+import com.snipux.navigationdrawer.adapter.MenuModel;
 
 public class MainActivity extends Activity {
 

@@ -1,4 +1,4 @@
-package com.example.navlist.adapter;
+package com.snipux.navigationdrawer.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.navlist.R;
+import com.snipux.navigationdrawer.R;
 
 public class MenuAdapter extends ArrayAdapter<MenuModel> {
 

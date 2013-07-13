@@ -1,4 +1,4 @@
-package com.example.navlist.adapter;
+package com.snipux.navigationdrawer.adapter;
 
 
 public class MenuModel {
