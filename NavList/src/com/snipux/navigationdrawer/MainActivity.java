@@ -27,12 +27,17 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+		/*
+		 * inisialisasi layout
+		 */
 		listView = (ListView) findViewById(R.id.drawer);
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		drawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
 				GravityCompat.START);
 
+		/*
+		 * mengisi adapter dengan menu yang kita inginkan
+		 */
 		MenuAdapter adapter = new MenuAdapter(this);
 		adapter.add(new MenuModel("Main Menu", 0, 0, true));
 		adapter.add(new MenuModel("Profile",
@@ -49,6 +54,9 @@ public class MainActivity extends Activity {
 		
 		listView.setAdapter(adapter);
 		
+		/*
+		 * men set listener jika salah satu menu item di klik
+		 */
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -62,8 +70,13 @@ public class MainActivity extends Activity {
 
 		});
 		
+		/*
+		 * inisialisasi navigation drawer listener karena kita membuat cutom toggle sendiri
+		 * lihat class MyActionBarDrawerToggle
+		 */
 		drawerToggle = new MyActionBarDrawerToggle(this, drawerLayout);
 		drawerLayout.setDrawerListener(drawerToggle);
+		
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		getActionBar().setHomeButtonEnabled(true);
 	}
@@ -108,6 +121,10 @@ public class MainActivity extends Activity {
 		drawerToggle.onConfigurationChanged(newConfig);
 	}
 	
+	/*
+	 * di perlukan ketika kita menggunakan actionbar untuk membuka 
+	 * Navigation Drawer selain menggeser dari samping
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    if(drawerToggle.onOptionsItemSelected(item)) {
